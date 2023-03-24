@@ -1,0 +1,352 @@
+/*start global rules*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fefdf9;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  margin: auto;
+  background-color: transparent;
+}
+
+/*small*/
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/*medium*/
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/*large*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/*end global rules*/
+
+/*start navigation bar*/
+.nav {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav .container .logo {
+  width: 50px;
+}
+
+.nav .container .logo img {
+  max-width: 100%;
+}
+
+.nav .container ul {
+  display: flex;
+}
+
+.nav .container ul li {
+  margin-right: 20px;
+  color: #918f9a;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.nav .container ul li:hover {
+  color: #d6675e;
+}
+
+.nav .container .bars {
+  display: none;
+}
+
+.nav .container .x-mark {
+  display: none;
+}
+
+/*mobile*/
+@media (max-width: 768px) {
+  .nav {
+    height: 80px;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 20px;
+  }
+  #overlay {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 193vh;
+    background-image: linear-gradient(
+      to right,
+      rgb(0 0 0 / 30%) 0%,
+      rgb(128 126 137 / 59%) 40%,
+      transparent 40%,
+      transparent 100%
+    );
+    z-index: 2;
+    display: none;
+  }
+  .nav .container .logo {
+    position: absolute;
+    left: 15px;
+  }
+  .nav .container ul {
+    flex-direction: column;
+    background-color: #fefdf9;
+    position: absolute;
+    right: 0;
+    top: -15px;
+    height: 100%;
+    width: 60%;
+    z-index: 998;
+    display: none;
+  }
+  .nav .container ul li {
+    margin-top: 30px;
+    font-size: 20px;
+    position: relative;
+    top: 125px;
+    color: black;
+  }
+  .nav .container .x-mark {
+    position: absolute;
+    z-index: 999;
+    right: 15px;
+    font-size: 30px;
+  }
+  .nav .container .bars {
+    display: block;
+    font-size: 30px;
+    position: absolute;
+    right: 15px;
+  }
+}
+
+/*end navigation bar*/
+
+/*start landing section*/
+.landing .container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.landing .container .f-p {
+    width: 70%;
+}
+
+.landing .container .f-p .image {
+    width: 100%;
+    height: 300px;
+    background-image: url(/images/desktop/image-web-3-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.landing .container .f-p .text-container {
+    display: flex;
+    gap: 60px;
+    margin-top: 25px;
+}
+
+.landing .container .f-p .text-container .heading {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.landing .container .f-p .text-container .text {
+    padding-right: 15px;
+}
+
+.landing .container .f-p .text-container .text p {
+    color: #6d6978;
+    font-size: 15px;
+    padding-right: 20px;
+    line-height: 2;
+}
+
+.landing .container .f-p .text-container .text button {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #f15d51;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    margin-top: 38px;
+    cursor: pointer;
+}
+
+.landing .container .f-p .text-container .text button:hover {
+    background-color: #000;
+}
+
+.landing .container .sec-p {
+    background-color: #00001a;
+    color: white;
+    padding: 0 20px;
+    width: 27%;
+}
+
+.landing .container .sec-p .heading {
+    color: #eab04f;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.landing .container .sec-p .text {
+    padding: 5px  0;
+    position: relative;
+}
+
+.landing .container .sec-p .text:nth-child(2)::before ,
+.landing .container .sec-p .text:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #5f5f79;
+}
+
+.landing .container .sec-p .text h4 {
+    cursor: pointer;
+}
+
+.landing .container .sec-p .text h4:hover {
+    color: #eab04f;
+}
+
+.landing .container .sec-p .text p {
+    font-size: 14px;
+    color: #9596ab;
+}
+
+.landing .container .third-part {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px, 1fr));
+    width: 100%;
+    margin-bottom: 150px;
+    margin-top: 60px;
+    gap: 25px;
+}
+
+.landing .container .third-part .box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.landing .container .third-part .box .image {
+    width: 125px;
+    height: 131px;
+}
+
+.landing .container .third-part .box .one {
+    background-image: url(/images/image-retro-pcs.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 163px;
+}
+
+.landing .container .third-part .box .two {
+    background-image: url(/images/image-top-laptops.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.landing .container .third-part .box .three {
+    background-image: url(/images/image-gaming-growth.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 142px;
+}
+
+.landing .box .text h2 {
+    color: #c8c5d0;
+    margin-top: 0;
+    font-size: 25px;
+}
+
+.landing .box .text h3 {
+    text-transform: capitalize;
+    margin: 0;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.landing .box .text h3:hover {
+    color: #f15d51;
+}
+
+.landing .box .text p {
+    font-size: 15px;
+    color: #9596ab;
+}
+
+/*mobile*/
+@media (max-width: 1200px) {
+    .landing {
+        margin-top: 15px;
+    }
+    .landing .container {
+        flex-direction: column;
+        padding: 0 17px;
+    }
+    .landing .container .f-p {
+        width: 100%;
+    }
+    .landing .container .f-p .image {
+        background-image: url(/images/mobile/image-web-3-mobile.jpg);
+    }
+    .landing .container .f-p .text-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .landing .container .f-p .text-container .heading {
+        font-size: 40px;
+    }
+    .landing .container .f-p .text-container .text button {
+        margin:15px 0 25px 0;
+    }
+    .landing .container .sec-p {
+        width: 100%;
+    }
+    .landing .container .third-part {
+        margin-top: 30px;
+    }
+    .landing .container .third-part .image {
+        height: 118px;
+    }
+}
+/*end landing section*/
